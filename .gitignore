@@ -1,0 +1,22 @@
+# Internal files — do not publish
+polaris-ai-guide-*.zip
+test-bib-weeded-deleted.sql
+
+# Internal SQL Statements directory (456 files)
+SQL Statements/
+
+# Claude Code state
+.claude/
+
+# Symlink artifact
+polarissql
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Sync script logs
+sync-to-repo.log
