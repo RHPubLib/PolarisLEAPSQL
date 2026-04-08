@@ -1,4 +1,4 @@
-# Polaris LEAP SQL — Local AI Assistant Resources
+# Polaris LEAP SQL AI Helper
 
 Community resources from **Rochester Hills Public Library (RHPL)** for Polaris ILS libraries
 that want to run an AI SQL assistant **entirely on their own hardware** — no cloud, no vendor
