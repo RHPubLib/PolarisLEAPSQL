@@ -1,0 +1,11 @@
+{
+  "apiKey": {
+    "Value": "YOUR_OPEN_WEBUI_API_KEY"
+  },
+  "apiBaseUrl": {
+    "Value": "https://your-openwebui-server"
+  },
+  "modelId": {
+    "Value": "polaris-sql-helper"
+  }
+}

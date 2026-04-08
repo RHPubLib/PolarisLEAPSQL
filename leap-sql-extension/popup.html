@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEAP SQL Helper</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="toolbar">
+      <a href="#" id="options-link" title="Settings">&#9881; Settings</a>
+    </div>
+
+    <div id="not-configured" class="notice hidden">
+      &#9888; API key not set. <a href="#" id="open-options">Open Settings</a>.
+    </div>
+
+    <div id="main">
+      <div id="chat-area" class="hidden">
+        <div id="response-text"></div>
+        <div id="sql-block" class="hidden">
+          <pre><code id="sql-code"></code></pre>
+          <div class="sql-actions">
+            <button id="copy-btn" title="Copy SQL">Copy</button>
+            <button id="insert-btn" disabled title="Switch to your LEAP tab first">
+              Insert into LEAP
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-msg" class="error hidden"></div>
+
+      <div id="input-area">
+        <textarea
+          id="question"
+          rows="2"
+          placeholder="What do you need to find? e.g. patrons under 13 years old"
+          autofocus
+        ></textarea>
+        <button id="ask-btn">Ask &#9654;</button>
+      </div>
+
+      <div id="loading" class="hidden">
+        <span class="spinner"></span> Thinking…
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

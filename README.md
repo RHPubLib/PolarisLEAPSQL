@@ -90,17 +90,28 @@ The extension is a Chrome Manifest V3 side panel extension. Key technical detail
 
 ### For other libraries
 
-The extension source is not yet published separately, but the architecture is straightforward
-to replicate. You need:
+The complete extension source is included in this repository under
+[`leap-sql-extension/`](leap-sql-extension/). To deploy it at your library:
 
-1. A running Open WebUI instance with the `polaris-sql-helper` model configured (see
-   [`polaris-qwen-guide.md`](polaris-qwen-guide.md))
-2. A Chrome MV3 extension with the side panel API pointing at your internal Open WebUI URL
-3. The SQL selector for the LEAP Find Tool input field:
-   `#find-tool > div > div.erms-search-panel > div.erms-inline-form > div > div.erms-search-input > input`
+1. **Set up the AI first** — you need a running Open WebUI instance with the
+   `polaris-sql-helper` model configured before the extension will work. See
+   [`polaris-qwen-guide.md`](polaris-qwen-guide.md).
+2. **Update `manifest.json`** — replace the two placeholder URLs in `host_permissions`
+   with your Open WebUI server URL and your Polaris LEAP URL.
+3. **Load the extension** — in Chrome, go to `chrome://extensions`, enable Developer Mode,
+   click **Load unpacked**, and select the `leap-sql-extension/` folder. This is sufficient
+   for testing.
+4. **Open Settings** in the extension and enter your Open WebUI API key, base URL, model ID,
+   and LEAP URL pattern.
+5. **For managed Chromebook deployment** — publish to the Chrome Web Store (unlisted is
+   fine for internal use), then add it to Google Admin Console under
+   **Devices → Chrome → Apps & Extensions** with Force install on your Staff OU. Use
+   [`admin-policy-example.json`](leap-sql-extension/admin-policy-example.json) as the
+   Policy for extensions JSON template — substitute your own API key and server URL.
 
-The extension can be sideloaded during testing or distributed via Google Admin Console
-for managed Chromebook fleets.
+> **Note:** `YOUR_OPEN_WEBUI_API_KEY` in `admin-policy-example.json` is a placeholder.
+> Generate a real key in Open WebUI under **Admin → Settings → Account → API Keys**.
+> Never commit a real API key to the repository.
 
 ---
 

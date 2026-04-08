@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "apiKey": {
+      "title": "API Key",
+      "description": "Bearer token for the Open WebUI API",
+      "type": "string"
+    },
+    "apiBaseUrl": {
+      "title": "API Base URL",
+      "description": "Base URL of the Open WebUI instance",
+      "type": "string"
+    },
+    "modelId": {
+      "title": "Model ID",
+      "description": "Open WebUI model name for the SQL helper",
+      "type": "string"
+    },
+    "leapUrlPattern": {
+      "title": "LEAP URL Pattern",
+      "description": "URL pattern to detect LEAP tabs (supports * wildcard)",
+      "type": "string"
+    },
+    "sqlSelector": {
+      "title": "SQL Field CSS Selector",
+      "description": "CSS selector for the Find Tool SQL input in LEAP",
+      "type": "string"
+    }
+  }
+}
