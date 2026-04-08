@@ -173,6 +173,29 @@ use it.
 No copy-paste, no tab switching, no SQL knowledge required. The query goes from question
 to results in seconds.
 
+### Understanding your queries — a built-in teaching tool
+
+Because the assistant runs on a full conversational model (Qwen via Open WebUI), staff aren't
+limited to just receiving a query. They can ask follow-up questions to understand *why* the SQL
+is written the way it is — turning every search into a learning opportunity.
+
+After receiving a query, staff can ask things like:
+
+- *"Can you explain to me in more detail why the SQL is written this way?"*
+- *"Why do we need the JOIN to ViewPatronRecords?"*
+- *"What does WITH (NOLOCK) do?"*
+
+The model responds with a plain-English breakdown of each part of the query — explaining the
+table relationships, the Find Tool constraints that shaped the structure, and what each clause
+is doing. Staff who start with no SQL knowledge can gradually build an understanding of the
+Polaris database just by asking questions naturally.
+
+![Qwen explaining the structure of a SQL query in Open WebUI](docs/leap-sql-explanation.png)
+
+This works both in the Chrome extension side panel and directly in the Open WebUI interface at
+your library's internal AI URL. The full Open WebUI chat interface is especially useful when
+staff want a deeper conversation about a complex query or want to iterate on results.
+
 ### How it was built
 
 The extension is a Chrome Manifest V3 side panel extension. Key technical details:
