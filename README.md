@@ -12,10 +12,10 @@ The full setup guide is in [`polaris-qwen-guide.md`](polaris-qwen-guide.md).
 ## What This Is
 
 Rochester Hills Public Library built a local AI assistant that helps library staff search and
-report against the Polaris database. Staff type a question in plain English — "find all patrons
-with holds but no checkouts in the last two years" or "show me items in lost status older than
-90 days" — and the assistant returns a working SQL query, ready to paste into the Polaris Find
-Tool, SSMS, or any reporting tool.
+report against the Polaris database. Staff type a question in plain English — "Help me find all
+the patrons between the ages of 18 and 54 who live in Rochester Hills Michigan and have had
+activity on their account in the last 6 months" — and the assistant returns a working SQL query,
+ready to paste into the Polaris Find Tool, SSMS, or any reporting tool.
 
 **No SQL knowledge is required.** The model understands the Polaris 8.0 database schema,
 knows the rules of Find Tool SQL (no semicolons, `WITH (NOLOCK)` placement, SELECT DISTINCT
